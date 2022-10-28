@@ -67,4 +67,5 @@ public class MainActivity extends AppCompatActivity {
         edtPassword.setText(sharedPreferences.getString("password",""));
         cbSave.setChecked(sharedPreferences.getBoolean("save",false));
     }
+
 }
