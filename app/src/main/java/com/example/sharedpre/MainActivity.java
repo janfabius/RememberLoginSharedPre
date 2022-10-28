@@ -32,22 +32,17 @@ public class MainActivity extends AppCompatActivity {
             // we don't want to save it, what should we do ?
             // we just remove it :D
             if (cbSave.isChecked()) {
-
                 sharedPreferences.edit().putString("account",sAccount).commit();
                 sharedPreferences.edit().putString("password",sPassword).commit();
                 sharedPreferences.edit().putBoolean("save",cbSave.isChecked()).commit();
             } else {
-
                 sharedPreferences.edit().remove("account").commit();
                 sharedPreferences.edit().remove("password").commit();
                 sharedPreferences.edit().remove("save").commit();
-
             }
 
         } else {
-
             Toast.makeText(this,"Login Fail",Toast.LENGTH_SHORT).show();
-
         }
 
     }
@@ -61,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         cbSave = findViewById(R.id.cbSave);
         // SharedPreferences are where you can store them as key - value
         // key used to call , value is the value to be stored
-        sharedPreferences = getApplication().getSharedPreferences("PhucVr",MODE_PRIVATE);
+        sharedPreferences = getApplication().getSharedPreferences("user_check",MODE_PRIVATE);
 
         // let's get data from shared preferences
         // Here the key we have to input is the same as the one you saved
